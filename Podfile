@@ -1,0 +1,10 @@
+platform :ios, '6.0'
+
+pod 'iOS-Extensions', '~> 0.0.6'
+pod 'ReactiveCocoa', '~> 1.9.7'
+pod 'SVProgressHUD', '~> 0.9'
+pod 'AFNetworking', '~> 1.3.2'
+pod 'MagicalRecord', '~> 2.2'
+pod 'SDWebImage-ProgressView', '~> 0.2.0'
+pod 'FontAwesomeKit', '~> 1.1.3'
+pod 'WYPopoverController', '~> 0.1.4'

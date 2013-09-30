@@ -1,0 +1,26 @@
+//
+//  Prefix header
+//
+//  The contents of this file are implicitly included at the beginning of every source file.
+//
+
+#import <Availability.h>
+
+#ifndef __IPHONE_3_0
+#warning "This project uses features only available in iOS SDK 3.0 and later."
+#endif
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>
+    #import <CoreData/CoreData.h>
+#import "kSettings.h"
+#import <iOS-Extensions/Extensions-Prefix.h>
+#import <ReactiveCocoa/ReactiveCocoa.h>
+#import <SVProgressHUD/SVProgressHUD.h>
+#import <MagicalRecord/CoreData+MagicalRecord.h>
+#import "NSUserDefaults+Near.h"
+#import "UIColor+RGB255.h"
+#import "UIViewController+CustomPresent.h"
+#import "UILabel+FontName.h"
+#endif
