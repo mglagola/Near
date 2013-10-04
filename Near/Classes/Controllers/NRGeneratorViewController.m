@@ -32,6 +32,7 @@ static int const IMAGE_INDEX_SECTION = 1;
     
     BOOL isFirstLocationUpdate;
     BOOL isScrolling;
+    BOOL needsToFetchData;
     
     CGPoint beforeContentOffset;
 }
@@ -86,9 +87,9 @@ static int const IMAGE_INDEX_SECTION = 1;
          ]];
     
     [[userDefaultsSignal filter:^BOOL(id value) {
-        return ![NRDataFetcher shared].isFetching;
+        return !needsToFetchData;
     }] subscribeNext:^(id x) {
-        [self fetchData];
+        needsToFetchData = YES;
     }];
 }
 
@@ -150,6 +151,9 @@ static int const IMAGE_INDEX_SECTION = 1;
 - (void) viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     [overlayView relayout];
+    
+    if (needsToFetchData)
+        [self fetchData];
 }
 
 - (void) viewWillAppear:(BOOL)animated {
