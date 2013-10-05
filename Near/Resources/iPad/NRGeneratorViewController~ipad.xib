@@ -7,20 +7,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NRGeneratorViewController">
             <connections>
-                <outlet property="addressLabel" destination="khp-91-cQG" id="diE-8n-AbD"/>
-                <outlet property="categoryLabel" destination="fWu-gA-Nhj" id="DUk-WL-6sn"/>
-                <outlet property="collectionView" destination="cEh-0R-hDO" id="xJ7-j8-uKr"/>
-                <outlet property="leftArrow" destination="pJ5-6h-g8d" id="qgp-SY-lgh"/>
-                <outlet property="menuButton" destination="iKI-2d-Vrp" id="wfs-HR-IBL"/>
-                <outlet property="milesLabel" destination="w5X-3a-Jy4" id="dwC-WA-qtl"/>
-                <outlet property="moreButton" destination="wap-5Z-iNy" id="Mwa-Y1-GRx"/>
-                <outlet property="nameLabel" destination="7ro-eT-AHs" id="vJD-yY-uzN"/>
-                <outlet property="nextButton" destination="ZK8-Uh-aR8" id="Sdv-Ha-92H"/>
-                <outlet property="overlayView" destination="tNv-le-vHn" id="LUS-Aj-DGt"/>
-                <outlet property="previousButton" destination="SaJ-HZ-g45" id="roK-oW-vaz"/>
-                <outlet property="refreshButton" destination="LbF-49-qt7" id="zvi-Zh-2a0"/>
-                <outlet property="rightArrrow" destination="sT1-Sw-TyO" id="JEH-Pe-63P"/>
-                <outlet property="view" destination="gUQ-sc-kvC" id="SqK-mD-xgI"/>
+                <outlet property="buttonBarView" destination="42n-6o-foU" id="axl-TD-HFO"/>
+                <outlet property="collectionView" destination="cEh-0R-hDO" id="T2p-tP-cWs"/>
+                <outlet property="overlayView" destination="tNv-le-vHn" id="2tn-Zh-qVk"/>
+                <outlet property="view" destination="gUQ-sc-kvC" id="4m2-Rl-9Y9"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -130,126 +120,127 @@
                         <constraint firstItem="w5X-3a-Jy4" firstAttribute="top" secondItem="khp-91-cQG" secondAttribute="bottom" constant="8" id="zKL-Gm-JOu"/>
                     </constraints>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="addressLabel" destination="khp-91-cQG" id="3QU-98-TqH"/>
+                        <outlet property="categoryLabel" destination="fWu-gA-Nhj" id="PFo-po-O0y"/>
+                        <outlet property="leftArrow" destination="pJ5-6h-g8d" id="rD3-F3-1oA"/>
+                        <outlet property="milesLabel" destination="w5X-3a-Jy4" id="gUD-7Q-oU9"/>
+                        <outlet property="nameLabel" destination="7ro-eT-AHs" id="qye-1R-1ef"/>
+                        <outlet property="rightArrrow" destination="sT1-Sw-TyO" id="mtY-Fg-wc3"/>
+                    </connections>
                 </view>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SaJ-HZ-g45">
-                    <rect key="frame" x="20" y="960" width="68" height="44"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="42n-6o-foU" customClass="NRButtonBarView">
+                    <rect key="frame" x="48" y="962" width="673" height="62"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GwA-GZ-4rO">
+                            <rect key="frame" x="4" y="13" width="120" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="25"/>
+                            <state key="normal" title="left">
+                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <state key="highlighted">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="prevButtonPressed:" destination="-1" eventType="touchUpInside" id="E6Q-ao-NOr"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rwg-Mu-DTE">
+                            <rect key="frame" x="132" y="13" width="120" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="25"/>
+                            <state key="normal" title="next">
+                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <state key="highlighted">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="nextButtonPressed:" destination="-1" eventType="touchUpInside" id="5qd-Fy-csP"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Bk-ub-WTQ">
+                            <rect key="frame" x="260" y="13" width="120" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="25"/>
+                            <state key="normal" title="Menu">
+                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <state key="highlighted">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="menuButtonPressed:" destination="-1" eventType="touchUpInside" id="61E-ha-ec3"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Xg-OG-LUu">
+                            <rect key="frame" x="388" y="13" width="120" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="25"/>
+                            <state key="normal" title="ref">
+                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <state key="highlighted">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="refreshButtonPressed:" destination="-1" eventType="touchUpInside" id="tOm-wF-mPo"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aJB-Iq-kNK">
+                            <rect key="frame" x="516" y="13" width="120" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="25"/>
+                            <state key="normal" title="More">
+                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <state key="highlighted">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="moreButtonPressed:" destination="-1" eventType="touchUpInside" id="60i-yc-N84"/>
+                            </connections>
+                        </button>
+                    </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="44" id="kW7-tD-P2O"/>
-                        <constraint firstAttribute="width" constant="68" id="paq-It-R45"/>
+                        <constraint firstAttribute="height" constant="62" id="3dM-J8-ngD"/>
+                        <constraint firstAttribute="width" constant="673" id="YQc-Xx-o1v"/>
                     </constraints>
-                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="25"/>
-                    <state key="normal" title="Prev">
-                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                    <state key="highlighted">
-                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
                     <connections>
-                        <action selector="prevButtonPressed:" destination="-1" eventType="touchUpInside" id="E6d-f6-vQ3"/>
+                        <outlet property="menuButton" destination="5Bk-ub-WTQ" id="zea-14-Pt8"/>
+                        <outlet property="moreButton" destination="aJB-Iq-kNK" id="17V-OI-ZBL"/>
+                        <outlet property="nextButton" destination="Rwg-Mu-DTE" id="G50-zU-6gb"/>
+                        <outlet property="previousButton" destination="GwA-GZ-4rO" id="MLk-p8-zJd"/>
+                        <outlet property="refreshButton" destination="4Xg-OG-LUu" id="9Pr-Vc-8Pa"/>
                     </connections>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZK8-Uh-aR8">
-                    <rect key="frame" x="96" y="960" width="68" height="44"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="68" id="Fh4-tx-V44"/>
-                        <constraint firstAttribute="height" constant="44" id="ybv-Dp-DPB"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="25"/>
-                    <state key="normal" title="Next">
-                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                    <state key="highlighted">
-                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                    <connections>
-                        <action selector="nextButtonPressed:" destination="-1" eventType="touchUpInside" id="fyl-0V-YDE"/>
-                    </connections>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iKI-2d-Vrp">
-                    <rect key="frame" x="171" y="960" width="68" height="44"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="44" id="5qW-mi-aRe"/>
-                        <constraint firstAttribute="width" constant="68" id="qrX-Cr-4dm"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="25"/>
-                    <state key="normal" title="Menu">
-                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                    <state key="highlighted">
-                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                    <connections>
-                        <action selector="menuButtonPressed:" destination="-1" eventType="touchUpInside" id="nRL-wT-cgC"/>
-                    </connections>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LbF-49-qt7">
-                    <rect key="frame" x="247" y="960" width="68" height="44"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="68" id="ShN-mV-X8J"/>
-                        <constraint firstAttribute="height" constant="44" id="UfD-f1-UcD"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="25"/>
-                    <state key="normal" title="More">
-                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                    <state key="highlighted">
-                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                    <connections>
-                        <action selector="refreshButtonPressed:" destination="-1" eventType="touchUpInside" id="Gi5-LI-2Hl"/>
-                    </connections>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wap-5Z-iNy">
-                    <rect key="frame" x="323" y="960" width="68" height="44"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="44" id="7eG-gU-F6a"/>
-                        <constraint firstAttribute="width" constant="68" id="GEy-MF-qzl"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="25"/>
-                    <state key="normal" title="More">
-                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                    <state key="highlighted">
-                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                    <connections>
-                        <action selector="moreButtonPressed:" destination="-1" eventType="touchUpInside" id="cxM-t8-uEx"/>
-                    </connections>
-                </button>
+                </view>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="LbF-49-qt7" secondAttribute="bottom" constant="20" id="0Ch-7k-1iQ"/>
-                <constraint firstItem="SaJ-HZ-g45" firstAttribute="leading" secondItem="gUQ-sc-kvC" secondAttribute="leading" constant="20" id="5NT-Wn-NAM"/>
-                <constraint firstAttribute="bottom" secondItem="iKI-2d-Vrp" secondAttribute="bottom" constant="20" id="AI5-mZ-Lw4"/>
+                <constraint firstAttribute="bottom" secondItem="42n-6o-foU" secondAttribute="bottom" id="4rW-TJ-6DL"/>
+                <constraint firstAttribute="trailing" secondItem="42n-6o-foU" secondAttribute="trailing" constant="47" id="63j-aD-mxG"/>
                 <constraint firstItem="tNv-le-vHn" firstAttribute="leading" secondItem="gUQ-sc-kvC" secondAttribute="leading" id="Dtk-wI-Gcz"/>
                 <constraint firstItem="cEh-0R-hDO" firstAttribute="leading" secondItem="gUQ-sc-kvC" secondAttribute="leading" id="Qsq-sU-Qdi"/>
                 <constraint firstItem="tNv-le-vHn" firstAttribute="top" secondItem="gUQ-sc-kvC" secondAttribute="top" id="RNg-mM-UnZ"/>
-                <constraint firstItem="ZK8-Uh-aR8" firstAttribute="leading" secondItem="SaJ-HZ-g45" secondAttribute="trailing" constant="8" id="Slt-4e-cNN"/>
-                <constraint firstItem="LbF-49-qt7" firstAttribute="leading" secondItem="iKI-2d-Vrp" secondAttribute="trailing" constant="8" id="Ude-dh-Pw5"/>
                 <constraint firstAttribute="bottom" secondItem="tNv-le-vHn" secondAttribute="bottom" id="YiU-fU-kXk"/>
+                <constraint firstItem="42n-6o-foU" firstAttribute="leading" secondItem="gUQ-sc-kvC" secondAttribute="leading" constant="48" id="e7t-16-ZMw"/>
                 <constraint firstAttribute="trailing" secondItem="tNv-le-vHn" secondAttribute="trailing" id="emE-hA-MQa"/>
-                <constraint firstItem="iKI-2d-Vrp" firstAttribute="leading" secondItem="ZK8-Uh-aR8" secondAttribute="trailing" constant="7" id="gPI-q0-iIs"/>
                 <constraint firstAttribute="trailing" secondItem="cEh-0R-hDO" secondAttribute="trailing" id="kCk-h4-BmH"/>
                 <constraint firstItem="cEh-0R-hDO" firstAttribute="top" secondItem="gUQ-sc-kvC" secondAttribute="top" id="km4-JB-tVm"/>
                 <constraint firstAttribute="bottom" secondItem="cEh-0R-hDO" secondAttribute="bottom" id="pq9-wg-RR0"/>
-                <constraint firstAttribute="bottom" secondItem="ZK8-Uh-aR8" secondAttribute="bottom" constant="20" id="tfV-kY-tj8"/>
-                <constraint firstAttribute="bottom" secondItem="SaJ-HZ-g45" secondAttribute="bottom" constant="20" id="uMx-IC-SzH"/>
             </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
         </view>

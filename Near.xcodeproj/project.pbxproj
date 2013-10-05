@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		4D60A22D17EFF79300CAFCFC /* NROverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D60A22C17EFF79300CAFCFC /* NROverlayView.m */; };
 		4D60A23017EFFB4800CAFCFC /* NRButtonBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D60A22F17EFFB4800CAFCFC /* NRButtonBarView.m */; };
-		4D966F2217F93128009C6EF0 /* NRSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D966F2117F93128009C6EF0 /* NRSearchViewController.m */; };
-		4D966F2417F93142009C6EF0 /* NRSearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D966F2317F93142009C6EF0 /* NRSearchViewController.xib */; };
 		4DA25C8617B35ED10096BA44 /* AFJSONRequestOperation+FoursquareVenues.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DA25C2817B35ED10096BA44 /* AFJSONRequestOperation+FoursquareVenues.m */; };
 		4DA25C8717B35ED10096BA44 /* MKMapView+LegalLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DA25C2A17B35ED10096BA44 /* MKMapView+LegalLabel.m */; };
 		4DA25C8817B35ED10096BA44 /* NSArray+Median.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DA25C2C17B35ED10096BA44 /* NSArray+Median.m */; };
@@ -85,9 +83,6 @@
 		4D60A22C17EFF79300CAFCFC /* NROverlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NROverlayView.m; sourceTree = "<group>"; };
 		4D60A22E17EFFB4800CAFCFC /* NRButtonBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NRButtonBarView.h; sourceTree = "<group>"; };
 		4D60A22F17EFFB4800CAFCFC /* NRButtonBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NRButtonBarView.m; sourceTree = "<group>"; };
-		4D966F2017F93128009C6EF0 /* NRSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NRSearchViewController.h; sourceTree = "<group>"; };
-		4D966F2117F93128009C6EF0 /* NRSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NRSearchViewController.m; sourceTree = "<group>"; };
-		4D966F2317F93142009C6EF0 /* NRSearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NRSearchViewController.xib; sourceTree = "<group>"; };
 		4DA25C2717B35ED10096BA44 /* AFJSONRequestOperation+FoursquareVenues.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AFJSONRequestOperation+FoursquareVenues.h"; sourceTree = "<group>"; };
 		4DA25C2817B35ED10096BA44 /* AFJSONRequestOperation+FoursquareVenues.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AFJSONRequestOperation+FoursquareVenues.m"; sourceTree = "<group>"; };
 		4DA25C2917B35ED10096BA44 /* MKMapView+LegalLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MKMapView+LegalLabel.h"; sourceTree = "<group>"; };
@@ -211,15 +206,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4D966F1F17F93104009C6EF0 /* ViewController */ = {
-			isa = PBXGroup;
-			children = (
-				4D966F2017F93128009C6EF0 /* NRSearchViewController.h */,
-				4D966F2117F93128009C6EF0 /* NRSearchViewController.m */,
-			);
-			name = ViewController;
-			sourceTree = "<group>";
-		};
 		4DA25C2417B35ED10096BA44 /* Near */ = {
 			isa = PBXGroup;
 			children = (
@@ -328,7 +314,6 @@
 			children = (
 				4DA25CC417B35F630096BA44 /* NRViewController.h */,
 				4DA25CC517B35F630096BA44 /* NRViewController.m */,
-				4D966F1F17F93104009C6EF0 /* ViewController */,
 				4DA25CB817B35F630096BA44 /* NRFRCCollectionViewController.h */,
 				4DA25CB917B35F630096BA44 /* NRFRCCollectionViewController.m */,
 				4DA25CCD17B35FE80096BA44 /* FRCCollectionViewController */,
@@ -410,7 +395,6 @@
 				4DEC580717B3628E0002E35B /* NRGeneratorViewController.xib */,
 				4DEC580817B3628E0002E35B /* NRInfoViewController.xib */,
 				4DEC580917B3628E0002E35B /* NRMenuViewController.xib */,
-				4D966F2317F93142009C6EF0 /* NRSearchViewController.xib */,
 			);
 			path = iPhone;
 			sourceTree = "<group>";
@@ -543,7 +527,6 @@
 				4DEC580C17B3628E0002E35B /* NRMenuViewController~ipad.xib in Resources */,
 				4DA25CAA17B35ED10096BA44 /* Images.xcassets in Resources */,
 				4DEC580F17B3628E0002E35B /* NRMenuViewController.xib in Resources */,
-				4D966F2417F93142009C6EF0 /* NRSearchViewController.xib in Resources */,
 				4DEC580D17B3628E0002E35B /* NRGeneratorViewController.xib in Resources */,
 				4DEC580A17B3628E0002E35B /* NRGeneratorViewController~ipad.xib in Resources */,
 				4DEC580B17B3628E0002E35B /* NRInfoViewController~ipad.xib in Resources */,
@@ -605,7 +588,6 @@
 				4DA25C9B17B35ED10096BA44 /* MenuSection.m in Sources */,
 				4DA25CEB17B360B60096BA44 /* NRStarView.m in Sources */,
 				4DA25C9E17B35ED10096BA44 /* VenueCategory.m in Sources */,
-				4D966F2217F93128009C6EF0 /* NRSearchViewController.m in Sources */,
 				4DA25C8D17B35ED10096BA44 /* NSUserDefaults+Near.m in Sources */,
 				4DA25CE717B360B60096BA44 /* NRMapAnnotiation.m in Sources */,
 				4DA25C8717B35ED10096BA44 /* MKMapView+LegalLabel.m in Sources */,
